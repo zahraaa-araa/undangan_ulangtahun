@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP</title>
+    <link rel="stylesheet" href="../css/rsvp.css">
+</head>
+
+<body>
+    <div class="rsvp-box">
+        <h1 class="title">RSVP</h1>
+
+        <!-- Notifikasi sukses -->
+        <div id="notifSuccess" class="notif hidden">
+            ✅ Konfirmasi berhasil terkirim!
+        </div>
+
+        <!-- Form RSVP -->
+        <form id="rsvpForm">
+            <div class="form-group">
+                <label>Nama</label>
+                <input type="text" id="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label>Grup</label>
+                <input type="text" id="grup" required>
+            </div>
+
+            <div class="form-group">
+                <label>No WhatsApp</label>
+                <div class="phone-wrapper">
+                    <select id="kode">
+                        <option value="+62">+62</option>
+                    </select>
+                    <input type="number" id="nohp" placeholder="Nomor WhatsApp" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Kehadiran</label>
+                <select id="kehadiran" required>
+                    <option value="">Pilih Kehadiran</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Jumlah Tamu</label>
+                <select id="jumlahTamu" required>
+                    <option value="">Pilih Jumlah</option>
+                    <option value="1 Orang">1 Orang</option>
+                    <option value="2 Orang">2 Orang</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Komentar atau Ucapan</label>
+                <textarea id="ucapan" rows="3" placeholder="Tuliskan komentar atau ucapan..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-kirim">Kirim</button>
+        </form>
+
+        <!-- Halaman Thank You -->
+        <div id="thankYou" class="hidden">
+            <h2>Thank You!</h2>
+            <p>Your confirmation has been recorded in our reservation list.</p>
+            <button class="btn-update">Update My Confirmation</button>
+            <div id="listUcapan"></div>
+        </div>
+
+        <!-- Tombol X untuk kembali -->
+        <button id="btnBack" class="btn-close">×</button>
+    </div>
+
+    <script src="../JavaScript/rsvp.js"></script>
+</body>
+
+</html>

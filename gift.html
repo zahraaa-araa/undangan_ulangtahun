@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift 🎁</title>
+  <link rel="stylesheet" href="../css/gift.css">
+</head>
+<body>
+  <div class="gift-box">
+    <h1 class="title">Gift 🎁</h1>
+    <p class="subtitle">Bagi yang ingin mengirimkan kado secara digital, berikut rekening & e-wallet:</p>
+
+    <div class="gift-list">
+      <div class="gift-card">
+  <img src="../assets/foto/BCA.png" alt="BCA" class="gift-logo logo-bca">
+  <div class="gift-info">
+    <h3>BCA</h3>
+    <p>No. Rek: <span id="bca">1234567890</span></p>
+    <p>a.n <b>Nama Pemilik</b></p>
+    <button onclick="copyToClipboard('bca')">Salin</button>
+  </div>
+</div>
+
+<div class="gift-card">
+  <img src="../assets/foto/dana.png" alt="DANA" class="gift-logo logo-dana">
+  <div class="gift-info">
+    <h3>DANA</h3>
+    <p>No. HP: <span id="dana">08123456789</span></p>
+    <p>a.n <b>Nama Pemilik</b></p>
+    <button onclick="copyToClipboard('dana')">Salin</button>
+  </div>
+</div>
+
+<div class="gift-card">
+  <img src="../assets/foto/gopay.png" alt="GoPay" class="gift-logo logo-gopay">
+  <div class="gift-info">
+    <h3>GoPay</h3>
+    <p>No. HP: <span id="gopay">08987654321</span></p>
+    <p>a.n <b>Nama Pemilik</b></p>
+    <button onclick="copyToClipboard('gopay')">Salin</button>
+  </div>
+</div>
+
+
+    <!-- Notif copy -->
+    <div id="copyNotif" class="notif hidden">Nomor berhasil disalin!</div>
+
+      <!-- Tombol X untuk kembali -->
+        <button id="btnBack" class="btn-close">×</button>
+
+  </div>
+
+  <script src="../JavaScript/gift.js"></script>
+</body>
+</html>
