@@ -1,0 +1,689 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #4ea9d3;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;  /* center horizontal */
+  align-items: center;      /* center vertical */
+  font-family: Arial, sans-serif;
+}
+
+
+/* Kotak di tengah */
+.invitation-box {
+  background-image: url(../assets/foto/bg5.png); /* lokasi file gambar */
+  background-repeat: no-repeat;  /* jangan diulang */
+  background-size: cover;        /* isi penuh layar */
+  background-position: center;   /* posisi di tengah */
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Cover */
+.cover {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  background: linear-gradient#c3dff7;
+  color: #003366;
+  overflow: hidden;
+}
+
+.audio-control {
+  position: fixed;
+  bottom: 20px;
+  right: 450px; /* geser lebih ke kiri */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(166, 191, 240, 0.6); /* pink transparan */
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px); /* efek blur di belakang */
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.audio-control:hover {
+  transform: scale(1.1);
+  background: rgba(65, 79, 138, 0.8); /* lebih pekat saat hover */
+}
+
+.audio-control:active {
+  transform: scale(0.95);
+}
+
+
+.judul {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 40px;
+  margin-top: 20px;
+  animation: grow 1.5s ease-in-out forwards; /* jalankan animasi */
+}
+
+/* Animasi kecil ke besar */
+@keyframes grow {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.judul span {
+  display: block;
+  font-size: 32px;
+  color: #004aad;
+}
+
+.foto-wrapper {
+  position: relative;
+  margin: auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;   /* tetap, biar foto anak bulat */
+  border: 6px solid white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-top: 70px;
+  animation: float 1s ease-in-out infinite; /* animasi naik turun */
+}
+
+/* Baling-baling di luar wrapper */
+.baling-baling {
+  display: block;
+  margin: 0 auto;           
+  position: relative;
+  top: -260px;              
+  width: 90px;              
+  z-index: 5;               
+  animation: float 1s ease-in-out infinite;
+}
+
+/* Foto bayi */
+.foto-baby {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animasi naik turun */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Tambahan dekor hanya untuk halaman selain cover */
+.page:not(.cover) {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dekor umum */
+.page {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Acara */
+.acara::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: url("../assets/foto/nobita.png") no-repeat bottom left;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+.acara::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 170px;
+  height: 170px;
+  background: url("../assets/foto/doraemon.png") no-repeat bottom right;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+
+/* Maps */
+.maps::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  background: url("../assets/foto/doraemon2.png") no-repeat bottom left;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+.maps::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -40px;
+  width: 250px;
+  height: 250px;
+  background: url("assets/nobita3.png") no-repeat bottom right;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+
+/* RSVP */
+.rsvp::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 220px;
+  height: 220px;
+  background: url("../assets/foto/nobita2.png") no-repeat bottom left;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+.rsvp::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: url("../assets/foto/sisuka.png") no-repeat bottom right;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+
+/* Gift */
+.gift::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 190px;
+  height: 190px;
+  background: url("../assets/foto/gian.png") no-repeat bottom left;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+.gift::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 190px;
+  height: 190px;
+  background: url("../assets/foto/suneo.png") no-repeat bottom right;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+
+/* Thanks (penutup hanya tengah bawah) */
+.thanks::before {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0px;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  background: url("../assets/foto/teman-teman.png") no-repeat bottom center;
+  background-size: contain;
+  animation: floatDekor 4s ease-in-out infinite;
+}
+.thanks::after {
+  content: none; /* hilangkan dekor kanan */
+}
+
+/* Pastikan dekor selalu di belakang */
+.acara::before, .acara::after,
+.maps::before, .maps::after,
+.rsvp::before, .rsvp::after,
+.gift::before, .gift::after,
+.thanks::before, .thanks::after {
+  z-index: -1;
+}
+.acara, .maps, .rsvp, .gift, .thanks {
+  position: relative;
+  z-index: 1;
+}
+
+/* Animasi dekor naik turun */
+@keyframes floatDekor {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+
+
+/* Dekorasi pojok bawah */
+.dekor {
+  position: absolute;
+  bottom: 0;
+  width: 120px;   /* atur sesuai kebutuhan */
+  z-index: 2;
+  animation: floatDekor 2s ease-in-out infinite; /* animasi naik turun */
+}
+
+.kiri-bawah {
+  left: 0;
+  width: 150px;
+}
+
+.kanan-bawah {
+  right: 0;
+}
+
+/* Animasi naik turun untuk dekor */
+@keyframes floatDekor {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.subtitle {
+  margin-top: -5px;     /* lebih naik */
+  font-size: 14px;
+  color: #fafacd;
+}
+
+.nama-tamu {
+  font-size: 22px;
+  margin: 0;            /* rapat, tidak terlalu jauh */
+  color: #3c3f4a;
+}
+
+.btn-invite {
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  margin-top: 5px;       /* lebih dekat dengan nama tamu */
+  cursor: pointer;
+}
+
+.btn-invite:hover {
+  background: #0072ff;
+}
+
+/* Bungkus semua biar mudah geser */
+.invite-content {
+  margin-top: -50px;        /* tetap bisa atur manual */
+  text-align: center;       /* biar tetap rapi di tengah */
+  animation: slideUp 1.5s ease-out forwards;
+  opacity: 0;               /* awalnya transparan */
+}
+
+/* Animasi dari bawah ke atas */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px); /* mulai agak di bawah */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);    /* posisi normal */
+    opacity: 1;
+  }
+}
+
+
+/* Undangan */
+.undangan {
+  text-align: center;
+  background-image: url(../assets/foto/bg5.png); /* lokasi file gambar */
+  min-height: 100vh;
+  background-position: center;   /* posisi di tengah */
+}
+
+/* Semua section pakai background sama */
+#acara, 
+#maps, 
+#rsvp, 
+#gift, 
+#thanks {
+  min-height: 100vh;
+  background-image: url(../assets/foto/bg5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#acara {
+  color: #fff;
+}
+
+.acara-content {
+  max-width: 700px;
+  width: 100%;
+}
+
+.welcome {
+  font-size: 2rem;
+  color: #ffeb3b;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.ulangtahun {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.nama-anak {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px); /* mulai dari atas */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);     /* posisi normal */
+    opacity: 1;
+  }
+}
+
+.welcome, 
+.ulangtahun, 
+.nama-anak {
+  opacity: 0; /* biar ga langsung muncul */
+  animation: slideDown 1s ease forwards;
+}
+
+/* kasih delay biar muncul bergantian */
+.welcome {
+  animation-delay: 0.2s;
+}
+
+.ulangtahun {
+  animation-delay: 0.6s;
+}
+
+.nama-anak {
+  animation-delay: 1s;
+}
+
+
+.jadwal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  opacity: 0; /* awalnya transparan */
+  transform: translateX(100px); /* geser ke kanan */
+  animation: slideRightToLeft 1s ease forwards;
+}
+
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.tanggal {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.hari {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.separator {
+  width: 2px;
+  height: 50px;
+  background: #fff;
+}
+
+.waktu {
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40%;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.countdown div {
+  background: navy;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  min-width: 50px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.countdown span {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@keyframes slideDownMaps {
+  from {
+    transform: translateY(-40px); /* mulai dari atas */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);     /* posisi normal */
+    opacity: 1;
+  }
+}
+
+.judul-maps {
+  font-size: 26px;
+  font-weight: bold;
+  color: #0056a6;
+  margin-bottom: 20px;
+
+  opacity: 0; /* sembunyikan dulu */
+  animation: slideDownMaps 1s ease forwards;
+}
+
+
+.map-embed {
+  margin: 0 auto 20px auto;
+  max-width: 320px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.alamat {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.btn-lokasi {
+  display: inline-block;
+  background: #1e40af;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-lokasi:hover {
+  background: #2563eb;
+}
+
+/* RSVP Section */
+.rsvp-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.judul-rsvp {
+  margin-bottom: 20px;
+}
+
+.foto-babyy {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 5px solid #fff;
+}
+
+.nama-ulang {
+  font-size: 26px;
+  font-weight: bold;
+  color: #004aad;
+  margin: 0;
+}
+
+.teks-rsvp {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 25px 0 30px 0;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.btn-rsvp {
+  display: inline-block;
+  background: #1e40af;
+  color: #fff;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-rsvp:hover {
+  background: #2563eb;
+}
+
+/* Gift Section */
+.gift-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.judul-gift {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1e3a8a; /* biru tua */
+}
+
+.teks-gift {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn-gift-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-gift {
+  background: #1e40af;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-gift:hover {
+  background: #2563eb;
+}
+
+/* Thanks Section */
+.thanks-content {
+  max-width: 600px;
+}
+
+.thanks-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 150px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.hidden {
+  display: none;
+}
+
+/* default semua elemen tersembunyi dulu */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* saat terlihat di layar */
+.animate-on-scroll.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+

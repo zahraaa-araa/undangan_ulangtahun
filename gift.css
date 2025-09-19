@@ -1,0 +1,135 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #4ea9d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.gift-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.title {
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.gift-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gift-card {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.gift-card:hover {
+  transform: translateY(-3px);
+}
+
+.gift-logo {
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* BCA */
+.logo-bca {
+  width: 90px;
+  height: 60px;
+}
+
+/* DANA */
+.logo-dana {
+  width: 60px;
+  height: 60px;
+}
+
+/* GoPay */
+.logo-gopay {
+  width: 75px;
+  height: 50px;
+}
+
+.gift-info {
+  text-align: left;
+  flex: 1;
+}
+
+.gift-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.gift-info p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.gift-info button {
+  margin-top: 5px;
+  padding: 6px 12px;
+  background: #4a6cf7;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.gift-info button:hover {
+  background: #304ffe;
+}
+
+/* notif */
+.notif {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* tombol close */
+.btn-close {
+  background: #f8d7da;
+  color: #721c24;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0 auto;
+}
