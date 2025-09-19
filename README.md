@@ -1,2 +1,159 @@
-# undangan_ulangtahun
-Undangan Digital
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Ulang Tahun</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Cover -->
+    <div class="invitation-box">
+        <section id="cover" class="cover">
+            <div class="content">
+                <h1 class="judul">Birthday Party <span>Sidqi</span></h1>
+                <div class="foto-wrapper">
+                    <img src="assets/foto/gallery-1.jpg" alt="Foto Anak" class="foto-baby">
+                </div>
+                <img src="assets/foto/baling.png" alt="baling" class="baling-baling">
+                <div class="invite-content">
+                    <p class="subtitle">With Pleasure</p>
+                    <h2 class="nama-tamu">Nama Tamu</h2>
+                    <button class="btn-invite" onclick="openInvitation()">Open Invitation</button>
+                </div>
+            </div>
+
+            <!-- Dekorasi pojok bawah -->
+            <img src="assets/foto/nobita.png" alt="Dekor Kiri" class="dekor kiri-bawah">
+            <img src="assets/foto/doraemon.png" alt="Dekor Kanan" class="dekor kanan-bawah">
+        </section>
+
+        <!-- Undangan (scrollable) -->
+        <main id="undangan" class="undangan hidden">
+
+            <!-- Acara -->
+            <section id="acara" class="page acara">
+                <div class="acara-content">
+                    <h2 class="welcome">WELCOME TO</h2>
+                    <h1 class="ulangtahun">3th</h1>
+                    <h3 class="nama-anak">SIDQI BIRTHDAY PARTY</h3>
+
+                    <div class="jadwal">
+                        <div class="tanggal">28</div>
+                        <div class="hari">
+                            <span>MINGGU</span><br>
+                            <span>SEP 2025</span>
+                        </div>
+                        <div class="separator"></div>
+                        <div class="waktu">
+                            <span>11.00 wita</span><br>
+                            <span>s.d SELESAI</span>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer (pindah ke dalam acara) -->
+                    <div class="countdown">
+                        <div>
+                            <span id="days">00</span><br>
+                            Hari
+                        </div>
+                        <div>
+                            <span id="hours">00</span><br>
+                            Jam
+                        </div>
+                        <div>
+                            <span id="minutes">00</span><br>
+                            Menit
+                        </div>
+                        <div>
+                            <span id="seconds">00</span><br>
+                            Detik
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Maps -->
+            <section id="maps" class="page maps">
+                <div class="maps-content">
+                    <h2 class="judul-maps animate-on-scroll">Lokasi Acara</h2>
+
+                    <!-- Embed Google Maps -->
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.9065905719985!2d114.58998559999999!3d-3.29571729999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4211bbc1be42d%3A0xd93490f4e3d79a8e!2sSMK%20Negeri%202%20Banjarmasin!5e1!3m2!1sid!2sid!4v1758098849723!5m2!1sid!2sid"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <!-- Alamat -->
+                    <p class="alamat">
+                        Jl. Brigjend H. Hasan Basri <br>
+                        No.6, Sungai Miai, Kec. Banjarmasin Utara, Kota Banjarmasin, Kalimantan Selatan
+                    </p>
+
+                    <!-- Tombol ke lokasi -->
+                    <a href="https://maps.app.goo.gl/yuA2PCYZhgp8Yn1k7" target="_blank" class="btn-lokasi">
+                        Petunjuk Ke Lokasi
+                    </a>
+                </div>
+            </section>
+
+            <!-- RSVP -->
+            <section id="rsvp" class="page rsvp">
+                <div class="rsvp-content">
+                    <div class="judul-rsvp">
+                        <img src="assets/foto/gallery-1.jpg" alt="Foto Anak" class="foto-babyy">
+                        <h1 class="nama-ulang">Birthday Party</h1>
+                    </div>
+
+                    <h2 class="teks-rsvp">Kirim Ucapan dan<br>Konfirmasi Kehadiran</h2>
+
+                    <!-- Tombol menuju RSVP -->
+                    <a href="html/rsvp.html" class="btn-rsvp">Kirim Ucapan RSVP</a>
+
+                    </a>
+                </div>
+            </section>
+
+            <!-- Gift / Tanda Kasih -->
+            <section id="gift" class="page gift">
+                <div class="gift-content">
+                    <h2 class="judul-gift">Tanda Kasih</h2>
+                    <p class="teks-gift">
+                        Terima kasih telah menambah semangat kegembiraan ulang tahun anak kami dengan
+                        kehadiran dan hadiah indah Anda.
+                    </p>
+
+                    <div class="btn-gift-group">
+                        <a href="html/gift.html" target="_blank" class="btn-gift">🎁 Cashless</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thanks / Penutup -->
+            <section id="thanks" class="page thanks">
+                <div class="thanks-content">
+                    <h2 class="thanks-text">
+                        Thank you for<br>
+                        Your attention<br>
+                        Hope to see you<br>
+                        at the event
+                    </h2>
+                </div>
+            </section>
+    </div>
+
+    </main>
+    </div>
+
+    <audio id="audioUndangan" src="assets/Lagu/doraemon.mp3" preload="auto" loop></audio>
+    <button id="btnAudioControl" class="audio-control" aria-label="Kontrol Musik">
+        &#9658; <!-- ikon play -->
+    </button>
+
+    <script src="JavaScript/script.js"></script>
+</body>
+
+</html>
